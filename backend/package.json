@@ -18,7 +18,7 @@
     "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tayrine Soares",
   "license": "ISC",
-  "description": ""
+  "description": "Starter backend with Supabase, Stripe, and Resend"
 }
