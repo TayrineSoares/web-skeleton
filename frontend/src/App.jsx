@@ -19,10 +19,14 @@ function App() {
     <Router >
       
       {/* Navbar stays visible on all pages */}
+      
       <Navbar />
       
       {/* Render the routing structure */}
-      <AppRoutes />
+      <div id="main-content"> 
+        <AppRoutes />
+      </div>
+      
 
       {/* Footer stays visible on all pages */}
       <Footer />
