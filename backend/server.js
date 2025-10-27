@@ -16,6 +16,12 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 // Helpful to keep this in .env for different environments (local, staging, prod)
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
+// ----------------------------------------------------------------------------
+
+//IMPORT ROUTES
+const testRouter = require('./src/routes/testRoutes');
+
+
 // --------------------------------------------------------------------
 // INITIALIZE EXPRESS
 const app = express();
@@ -43,6 +49,7 @@ app.use(morgan('dev'));
 // Parses incoming JSON requests (e.g., req.body)
 app.use(express.json());
 
+
 //------------------------------------------------------------------------------
 //ROUTES
 
@@ -54,8 +61,10 @@ app.get('/', (req, res) => {
 });
 
 
-// Add routers as they are built
-// app.use('/test', testRouter);
+//Add routers as they are built
+// Prefix routes with /api to clearly separate backend API from frontend routes
+// Helps avoid conflicts and makes backend endpoints more organized
+app.use('/api/test', testRouter);
 
 
 //-------------------------------------------------------------------------
