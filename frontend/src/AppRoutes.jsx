@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Import the pages that will be rendered for each route
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 // Define all the frontend routes in one place
 const AppRoutes = () => {
@@ -14,8 +15,10 @@ const AppRoutes = () => {
         {/* Define route for the homepage */}
         <Route path="/" element={<Home />} />
 
-        {/* Define route for the contact page */}
+        {/* Define routes for pages */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+
       </Routes>
     </Router>
   );

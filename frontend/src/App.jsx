@@ -10,6 +10,7 @@ function App() {
     <div>
     
       <h1>Inside App.jsx</h1>
+      
 
       {/* Render the routing structure */}
       <AppRoutes />
