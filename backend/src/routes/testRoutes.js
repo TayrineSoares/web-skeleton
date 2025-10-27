@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Import Supabase when needed
-//const { supabase } = require('../../supabase/db');
+// const supabase = require('../../src/supabase/db');
 
 //GET /api/test
 // Access it at: http://localhost:8080/api/test

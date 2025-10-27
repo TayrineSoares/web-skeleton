@@ -5,13 +5,12 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 // OPTIONAL: Import Supabase client if needed
-//const supabase = require('./supabase/db');
+// const supabase = require('./src/supabase/db');
 
 // Stripe setup (used for payment processing)
 const stripe = require('stripe')(process.env.STRIPE_SECRET_SK);
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
-// single source of truth for where the frontend lives
 // Define where the frontend lives (used for CORS)
 // Helpful to keep this in .env for different environments (local, staging, prod)
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
